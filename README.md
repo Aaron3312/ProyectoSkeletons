@@ -26,11 +26,30 @@ The simulation features five robot agents tasked with organizing objects in a st
   - Obstacle jumping (jumpForce = 5f)
   - Animated movement
 
+![Collision System](images/EvitColizion.png)
+*Demonstration of the collision avoidance system*
+
+![Collection Process](images/recolecting.png)
+*Robot performing object collection tasks*
+
 #### Environment Properties
 - NavMesh-defined navigation space
+![Navigation Mesh](images/Navmesh.png)
+*NavMesh configuration for autonomous navigation*
+
 - Two distinct zones:
   - Red Zone (A): Collection area (-15, -1.19, 0)
+![Zone A](images/zonaA.png)
+*Collection zone where objects are initially placed*
+
   - Blue Zone (B): Delivery area (30, -1.19, 0)
+![Zone B](images/zonaB.png)
+*Delivery zone where objects are transported*
+
+- Environmental challenges:
+![Obstacles](images/obstaculos.png)
+*Various obstacles and terrain challenges*
+
 - Dungeon environment: ~120 x 25 x 180 units
 - 10 randomly distributed cubes in red zone
 
@@ -46,6 +65,9 @@ The system tracks:
 
 ![Performance Metrics Dashboard](images/metricas.png)
 *Real-time performance metrics visualization*
+
+![Advanced Analytics](images/metricas2.png)
+*Detailed performance analytics and agent efficiency tracking*
 
 ### Part 2: Unity 3D Implementation
 Located in `/codes/`:
@@ -90,84 +112,44 @@ Located in `/robot-dashboard/`:
 │   ├── dungeon.png
 │   ├── robots.png
 │   ├── metricas.png
+│   ├── metricas2.png
 │   ├── luces.png
-│   └── yolo.png
+│   ├── yolo.png
+│   ├── EvitColizion.png
+│   ├── Navmesh.png
+│   ├── obstaculos.png
+│   ├── recolecting.png
+│   ├── zonaA.png
+│   └── zonaB.png
 ├── Documentation.pdf
 ├── demo.mp4
 └── project.unitypackage
 ```
 
-## 🛠️ Setup and Installation
-1. Clone the repository
-2. Import the `project.unitypackage` into Unity
-3. Set up Python environment with required dependencies
-4. Configure YOLO v5 model
-5. Start the required controllers:
-   ```bash
-   # Terminal 1: Start the camera controller
-   python CameraController.py
-
-   # Terminal 2: Start the agent controller
-   python Controller2.py
-   ```
-6. Launch the metrics dashboard:
-   ```bash
-   cd robot-dashboard
-   npm install
-   npm run dev
-   ```
-7. Run the Unity simulation
-
-## 🔧 Implementation Details
-### Agent Architecture
-The robot agents are implemented using a state-machine architecture with the following key components:
-- State management
-- Navigation control
-- Object interaction
-- Communication system
-- Visual feedback
-
-### Optimization Strategies
-Current optimization methods include:
-1. Dynamic task allocation
-2. Path optimization
-3. Collision avoidance
-4. Resource management
-5. Real-time adaptation
-
-### Future Improvements
-Potential enhancements:
-1. Advanced path planning
-2. Machine learning for behavior optimization
-3. Enhanced inter-agent communication
-4. Dynamic zone management
-5. Improved collision prediction
-
-## 📊 Performance Analysis
-The system's performance is measured through:
-- Delivery success rate
-- Navigation efficiency
-- Resource utilization
-- Task completion time
-Current metrics show varying performance among agents, with A0 and A2 demonstrating the highest efficiency (11.8% and 12.17% respectively).
-
-## 📝 Documentation
-Detailed documentation including:
-- Class diagrams
-- Ontology specifications
-- Implementation details
-- Performance metrics
-Can be found in the Documentation.pdf file.
-
-## 🎥 Demo
-A demonstration video (`demo.mp4`) shows the system in action, featuring:
-- Agent navigation
-- Object manipulation
-- Computer vision integration
-- Real-time metrics
+[El resto del contenido continúa igual hasta la licencia]
 
 ## 📄 License
-[Specify your license here]
+
+Copyright (c) 2024 Christian Fernando Aguilera Santos, Aarón Hernández Jiménez, Maxime Parienté, Pablo Esteban Reyes, Luis Marco Barriga Baez, Aram Marco Barriga Baez
+
+All rights reserved.
+
+This software and associated documentation files (the "Software") are protected by copyright law. No part of this Software may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the copyright holders.
+
+Permission Restrictions:
+1. The Software may not be used, copied, modified, merged, published, distributed, sublicensed, and/or sold without explicit written permission from the copyright holders.
+2. Any unauthorized use, reproduction, or distribution of the Software may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under law.
+
+To request permission for usage:
+- Contact: 
+  - Aarón Hernández Jiménez - A01642529@tec.mx
+- Required Information for Request:
+  - Intended use
+  - Scope of usage
+  - Duration of usage
+  - User/Organization information
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## 👥 Contributors
 - Christian Fernando Aguilera Santos (A01643407)
